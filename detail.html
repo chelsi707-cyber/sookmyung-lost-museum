@@ -2,17 +2,78 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <title>소장품 상세 명세서</title>
-  <meta name="author" content="팀원A, 팀원B, 팀원C, 팀원D">
-  <meta name="description" content="캠퍼스 분실물 박물관 소장품 상세 정보 페이지">
-  <meta name="keyword" content="분실물, 캠퍼스, 에어팟, 소장품, 수령신청">
-  <link rel="stylesheet" href="./style.css">
+  <title>숙대분실물박물관</title>
+  <!-- 과제 정보: 팀원 정보 기입 -->
+  <meta name="author" content="공도원, 김나윤, 김모예, 박서연">
+  <meta name="description" content="국립중앙박물관 웹을 참고한 숙명여자대학교 분실물 게시판">
+  
+  <!-- 외부 CSS 스타일시트 연동 -->
+  <link rel="stylesheet" href="./indexstyle.css">
 </head>
 <body>
 
+  <!-- 머리말 및 상단 내비게이션 영역 -->
   <header>
-    <h1>캠퍼스 유물전 (Campus Lost &amp; Found)</h1>
+    <div class="header-container">
+      
+      <!-- 로고 -->
+      <div class="logo">
+        <a href="index.html">
+          <h1>숙대분실물박물관</h1>
+        </a>
+      </div>
+
+      <!-- 메인 메뉴 (드롭다운 포함) -->
+      <nav class="gnb">
+        <ul>
+          <!-- 1. 장소별 -->
+          <li>
+            <a href="#">장소별</a>
+            <ul class="submenu">
+              <li><a href="#">순헌관</a></li>
+              <li><a href="#">명신관</a></li>
+              <li><a href="#">프라임관</a></li>
+              <li><a href="#">도서관</a></li>
+            </ul>
+          </li>
+
+          <!-- 2. 시기별 -->
+          <li>
+            <a href="#">시기별</a>
+            <ul class="submenu">
+              <li><a href="#">일주일 내</a></li>
+              <li><a href="#">한달 내</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. 종류별 -->
+          <li>
+            <a href="#">종류별</a>
+            <ul class="submenu">
+              <li><a href="#">전자기기</a></li>
+              <li><a href="#">지갑</a></li>
+              <li><a href="#">필기구</a></li>
+            </ul>
+          </li>
+
+          <!-- 4. 박물관 소개 -->
+          <li>
+            <a href="about.html">박물관 소개</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 우측 검색창 영역 -->
+      <div class="header-util">
+        <form class="search-box" action="index.html" method="get">
+          <input type="search" name="query" placeholder="분실물 검색어 입력" aria-label="검색">
+          <button type="submit" aria-label="검색 제출">🔍</button>
+        </form>
+      </div>
+
+    </div>
   </header>
+
 
   <nav>
     <a href="index.html">소장품 갤러리</a> |
@@ -89,8 +150,10 @@
 
   <hr>
 
+    <!-- 꼬리말 영역 -->
   <footer>
-    <p>본 소장품에 대한 소유권 확인은 학생지원팀 분실물 보관 데스크에서 최종 승인됩니다.</p>
+    <p>숙대분실물박물관 | 숙명여자대학교 분실물 게시판</p>
+    <p>&copy; 2026 Lost &amp; Found Archive. All rights reserved.</p>
   </footer>
 
 </body>
