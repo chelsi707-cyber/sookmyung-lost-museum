@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>소장품 상세 명세서</title>
+  <meta name="author" content="팀원A, 팀원B, 팀원C, 팀원D">
+  <meta name="description" content="캠퍼스 분실물 박물관 소장품 상세 정보 페이지">
+  <meta name="keyword" content="분실물, 캠퍼스, 에어팟, 소장품, 수령신청">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header>
+    <h1>캠퍼스 유물전 (Campus Lost &amp; Found)</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">소장품 갤러리</a> |
+    <a href="about.html">박물관 소개 및 이용안내</a>
+  </nav>
+
+  <hr>
+
+  <main>
+    <article>
+      <h2>소장품 세부 명세서: 에어팟 프로 2세대</h2>
+
+      <!-- 좌우 2단 배치를 위한 래퍼 (실제 배치는 CSS에서 설정) -->
+      <div class="detail-container">
+
+        <!-- 좌측: 습득물 사진 영역 -->
+        <div class="detail-media">
+          <figure>
+            <img src="./images/airpods1.jpg" alt="순헌관 302호 습득 에어팟 프로 본체 상세 사진" width="360" height="280">
+            <figcaption>[사진 1] 습득물 실물 전면 사진</figcaption>
+          </figure>
+        </div>
+
+        <!-- 우측: 제원 명세 표 -->
+        <div class="detail-spec">
+          <table border="1">
+            <caption>소장품 기본 제원표</caption>
+            <thead>
+              <tr>
+                <th colspan="2">분실물 상세 식별 정보</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>관리 번호</th>
+                <td>2026-SH-014</td>
+              </tr>
+              <tr>
+                <th>소장 품명</th>
+                <td>에어팟 프로 2세대 본체 (화이트)</td>
+              </tr>
+              <tr>
+                <th>발견 장소</th>
+                <td>순헌관 302호 강의실 4번째 줄 책상 아래</td>
+              </tr>
+              <tr>
+                <th>발견 일시</th>
+                <td>2026년 10월 08일 16:30경</td>
+              </tr>
+              <tr>
+                <th>습득 상태</th>
+                <td>외관 양호, 본체 뒷면 미세 흠집 있음</td>
+              </tr>
+              <tr>
+                <th>현재 보관처</th>
+                <td>학생회관 2층 학생지원팀 유물 보관실</td>
+              </tr>
+              <tr>
+                <th>보관 상태</th>
+                <td><strong>보관중 (수령 가능)</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- 수령 신청 페이지로 이동하는 링크 -->
+          <p>
+            <a href="claim.html" class="claim-link">본인 확인 및 수령 신청하기</a>
+          </p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>본 소장품에 대한 소유권 확인은 학생지원팀 분실물 보관 데스크에서 최종 승인됩니다.</p>
+  </footer>
+
+</body>
+</html>
