@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>숙명분실물박물관</title>
+  <!-- 과제 정보: 팀원 정보 기입 -->
+  <meta name="author" content="공도원, 김나윤, 김모예, 박서연">
+  <meta name="description" content="국립중앙박물관 웹을 참고한 숙명여자대학교 분실물 게시판">
+  
+  
+  <link rel="stylesheet" href="./indexstyle.css">
+</head>
+<body>
+
+  <!-- 머리말 및 상단 내비게이션 영역 -->
+  <header>
+    <div class="header-container">
+      
+      <!-- 로고 -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="./images/sm_emblem.png" alt="숙명여자대학교" class="logo-img"><h1>숙명분실물박물관</h1>
+        </a>
+      </div>
+
+      <!-- 메인 메뉴 (드롭다운 포함) -->
+      <nav class="gnb">
+        <ul>
+          <!-- 1. 장소별 -->
+          <li>
+            <a href="#">장소별</a>
+            <ul class="submenu">
+              <li><a href="#">순헌관</a></li>
+              <li><a href="#">명신관</a></li>
+              <li><a href="#">프라임관</a></li>
+              <li><a href="#">도서관</a></li>
+            </ul>
+          </li>
+
+          <!-- 2. 시기별 -->
+          <li>
+            <a href="#">시기별</a>
+            <ul class="submenu">
+              <li><a href="#">일주일 내</a></li>
+              <li><a href="#">한달 내</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. 종류별 -->
+          <li>
+            <a href="#">종류별</a>
+            <ul class="submenu">
+              <li><a href="#">전자기기</a></li>
+              <li><a href="#">지갑</a></li>
+              <li><a href="#">필기구</a></li>
+            </ul>
+          </li>
+
+          <!-- 4. 박물관 소개 -->
+          <li>
+            <a href="about.html">박물관 소개</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 우측 검색창 영역 -->
+      <div class="header-util">
+        <form class="search-box" action="index.html" method="get">
+          <input type="search" name="query" placeholder="분실물 검색어 입력" aria-label="검색">
+        </form>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 히어로: 사진 위 글씨 -->
+  <section class="hero">
+    <img class="hero-bg" src="./images/KakaoTalk_Photo_2026-10-15-15-47-39.png" alt="숙명여자대학교 박물관 전시 전경">
+    <div class="hero-overlay">
+      <p class="eyebrow">SOOKMYUNG LOST &amp; FOUND MUSEUM</p>
+      <div class="hero-head">
+        <span class="hero-year">1906</span>
+        <h2>숙명분실물박물관</h2>
+        <span class="hero-year">2026</span>
+      </div>
+      <p class="hero-desc">캠퍼스 곳곳에서 수집된 분실물을 하나의 소장품으로 기록하고 전시합니다. 당신이 잃어버린 그 물건을 이곳에서 찾아보세요.</p>
+      <div class="hero-scroll">SCROLL<br>&#8595;</div>
+    </div>
+  </section>
+
+
+  <!-- 메인 본문 영역 -->
+  <main>
+    <div class="gallery-head">
+      <h2 class="gallery-title">분실물 갤러리</h2>
+      <p class="gallery-desc">캠퍼스 곳곳에서 수집된 분실물을 한눈에 살펴보고, 내 물건을 찾아보세요.</p>
+    </div>
+
+    <nav class="tabs">
+      <a class="tab is-active" href="#">최근 등록</a>
+    </nav>
+
+    <div class="card-grid">
+      <article class="card-item">
+        <a href="detail.html">
+          <figure><img src="./images/_ (18).jpeg" alt="에어팟 프로 2세대"></figure>
+          <div class="card-body">
+            <p class="card-name">에어팟 프로 2세대</p>
+            <p class="card-meta">2026-SH-014 &middot; 순헌관</p>
+          </div>
+        </a>
+      </article>
+      <article class="card-item">
+        <a href="detail.html">
+          <figure><img src="./images/_ (18).jpeg" alt="검정색 가죽 지갑"></figure>
+          <div class="card-body">
+            <p class="card-name">검정색 가죽 지갑</p>
+            <p class="card-meta">2026-MS-021 &middot; 명신관</p>
+          </div>
+        </a>
+      </article>
+      <article class="card-item">
+        <a href="detail.html">
+          <figure><img src="./images/_ (18).jpeg" alt="투명 필통 및 문구류"></figure>
+          <div class="card-body">
+            <p class="card-name">투명 필통 및 문구류</p>
+            <p class="card-meta">2026-PR-007 &middot; 프라임관</p>
+          </div>
+        </a>
+      </article>
+      <article class="card-item">
+        <a href="detail.html">
+          <figure><img src="./images/_ (18).jpeg" alt="아이패드 에어 5세대"></figure>
+          <div class="card-body">
+            <p class="card-name">아이패드 에어 5세대</p>
+            <p class="card-meta">2026-LB-032 &middot; 도서관</p>
+          </div>
+        </a>
+      </article>
+      <article class="card-item">
+        <a href="detail.html">
+          <figure><img src="./images/_ (18).jpeg" alt="숙명여자대학교 학생증"></figure>
+          <div class="card-body">
+            <p class="card-name">숙명여자대학교 학생증</p>
+            <p class="card-meta">2026-SH-015 &middot; 순헌관</p>
+          </div>
+        </a>
+      </article>
+      <article class="card-item">
+        <a href="detail.html">
+          <figure><img src="./images/_ (18).jpeg" alt="3단 암막 양산"></figure>
+          <div class="card-body">
+            <p class="card-name">3단 암막 양산</p>
+            <p class="card-meta">2026-MS-022 &middot; 명신관</p>
+          </div>
+        </a>
+      </article>
+      <article class="card-item">
+        <a href="detail.html">
+          <figure><img src="./images/_ (18).jpeg" alt="갤럭시 워치 6"></figure>
+          <div class="card-body">
+            <p class="card-name">갤럭시 워치 6</p>
+            <p class="card-meta">2026-PR-008 &middot; 프라임관</p>
+          </div>
+        </a>
+      </article>
+      <article class="card-item">
+        <a href="detail.html">
+          <figure><img src="./images/_ (18).jpeg" alt="체크무늬 파우치"></figure>
+          <div class="card-body">
+            <p class="card-name">체크무늬 파우치</p>
+            <p class="card-meta">2026-LB-033 &middot; 도서관</p>
+          </div>
+        </a>
+      </article>
+      <article class="card-item">
+        <a href="detail.html">
+          <figure><img src="./images/_ (18).jpeg" alt="카시오 공학용 계산기"></figure>
+          <div class="card-body">
+            <p class="card-name">카시오 공학용 계산기</p>
+            <p class="card-meta">2026-SH-016 &middot; 순헌관</p>
+          </div>
+        </a>
+      </article>
+    </div>
+  </main>
+
+  <!-- 꼬리말 영역 -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <p class="footer-name">숙명분실물박물관</p>
+        <p>서울특별시 용산구 청파로47길 100<br>숙명여자대학교 학생회관 305호 학생지원센터</p>
+      </div>
+      <div class="footer-col">
+        <h4>수령 데스크</h4>
+        <p>학생회관 305호 학생지원센터<br>월~금 09:00 ~ 17:30 운영</p>
+      </div>
+      <div class="footer-col">
+        <h4>문의</h4>
+        <p>교내 내선 02-710-9686</p>
+      </div>
+      <div class="footer-col">
+        <h4>이용 안내</h4>
+        <p>방문 시 실물 신분증(학생증 또는<br>주민등록증)을 반드시 지참해 주세요.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Lost &amp; Found Archive. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
