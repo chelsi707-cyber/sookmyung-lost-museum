@@ -4,28 +4,24 @@
     font-family: "NMFClassic";
     src: url(./fonts/13_NMFClassic-M.ttf) format("truetype");
     font-weight: 400;
-    font-display: swap
     }
 
 @font-face {
     font-family: "NMFClassic";
     src: url(./fonts/13_NMFClassic-B.ttf) format("truetype");
     font-weight: 700;
-    font-display: swap
     }
 
 @font-face {
     font-family: "HeirofLight";
     src: url(./fonts/13_HeirofLight-R.ttf) format("truetype");
     font-weight: 400;
-    font-display: swap
     }
 
 @font-face {
     font-family: "HeirofLight";
     src: url(./fonts/13_HeirofLight-B.ttf) format("truetype");
     font-weight: 700;
-    font-display: swap
     }
 
 * {
@@ -144,7 +140,6 @@ nav.gnb > ul > li:hover .submenu {
 
 .search-box input {
     border: none;
-    outline: none;
     background: transparent;
     width: 100%;
     font-size: 14px;
@@ -154,7 +149,6 @@ nav.gnb > ul > li:hover .submenu {
 .search-box button {
     background: none;
     border: none;
-    cursor: pointer;
     font-size: 14px;
     padding: 4px 8px;
     color: #E6E3E3
@@ -386,7 +380,6 @@ input[type="submit"] {
     border-radius: 4px;
     font-size: 15px;
     font-weight: 500;
-    cursor: pointer
     }
 
 input[type="submit"]:hover {
@@ -400,7 +393,6 @@ input[type="reset"] {
     padding: 13px 24px;
     border-radius: 4px;
     font-size: 14px;
-    cursor: pointer
     }
 
 footer {
@@ -858,7 +850,6 @@ main > .breadcrumb {
     font-size: 16px;
     letter-spacing: 1px;
     font-family: inherit;
-    cursor: pointer
     }
 
 .submit-big:hover {
@@ -876,7 +867,6 @@ main > .breadcrumb {
     border: none;
     color: #5C4E4E;
     font-size: 13px;
-    cursor: pointer;
     text-decoration: underline;
     font-family: inherit
     }
