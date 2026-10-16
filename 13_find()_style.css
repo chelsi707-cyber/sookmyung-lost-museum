@@ -209,16 +209,6 @@ main {
     border-radius: 6px
     }
 
-.card-item figcaption {
-    font-family: "NMFClassic", "Noto Serif KR", serif;
-    padding: 16px;
-    font-size: 16px;
-    color: #1A1A1A;
-    text-align: center;
-    border-top: 1px solid #BCBABA;
-    background-color: #FFF
-    }
-
 .card-item:hover {
     border-color: #000
     }
@@ -247,11 +237,6 @@ main {
     border-radius: 8px
     }
 
-.detail-media figcaption {
-    margin-top: 10px;
-    font-size: 13px;
-    color: #5C4E4E
-    }
 
 .detail-spec {
     flex-grow: 1;
@@ -264,13 +249,6 @@ main {
     background-color: #FFF
     }
 
-.detail-spec caption {
-    caption-side: top;
-    text-align: left;
-    font-size: 13px;
-    color: #5C4E4E;
-    padding-bottom: 10px
-    }
 
 .detail-spec th, .detail-spec td {
     border: 1px solid #BCBABA;
@@ -344,14 +322,6 @@ main {
     width: 100%;
     border-collapse: collapse;
     margin-top: 8px
-    }
-
-.info-table caption {
-    caption-side: top;
-    text-align: left;
-    font-size: 13px;
-    color: #5C4E4E;
-    padding-bottom: 10px
     }
 
 .info-table th, .info-table td {
@@ -650,12 +620,6 @@ footer {
     height: auto;
     border-radius: 0;
     background-color: #FFF
-    }
-
-.product-media figcaption {
-    margin-top: 12px;
-    font-size: 13px;
-    color: #5C4E4E
     }
 
 .product-info {
