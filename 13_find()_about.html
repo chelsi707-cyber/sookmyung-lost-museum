@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>숙명분실물박물관 소개</title>
+  <!-- 과제 정보: 팀원 정보 기입 -->
+  <meta name="author" content="공도원, 김나윤, 김모예, 박서연">
+  <meta name="description" content="숙명분실물박물관 소개 및 이용 안내">
+  
+  
+  <link rel="stylesheet" href="./13_find()_style.css">
+</head>
+<body>
+
+  <!-- 머리말 및 상단 내비게이션 영역 -->
+  <header>
+    <div class="header-container">
+      
+      <!-- 로고 -->
+      <div class="logo">
+        <a href="13_find()_index.html">
+          <img src="./images/13_logo.png" alt="숙명여자대학교" class="logo-img"><h1>숙명분실물박물관</h1>
+        </a>
+      </div>
+
+      <!-- 메인 메뉴 (드롭다운 포함) -->
+      <nav class="gnb">
+        <ul>
+          <!-- 1. 장소별 -->
+          <li>
+            <a href="#">장소별</a>
+            <ul class="submenu">
+              <li><a href="#">순헌관</a></li>
+              <li><a href="#">명신관</a></li>
+              <li><a href="#">프라임관</a></li>
+              <li><a href="#">도서관</a></li>
+            </ul>
+          </li>
+
+          <!-- 2. 시기별 -->
+          <li>
+            <a href="#">시기별</a>
+            <ul class="submenu">
+              <li><a href="#">일주일 내</a></li>
+              <li><a href="#">한달 내</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. 종류별 -->
+          <li>
+            <a href="#">종류별</a>
+            <ul class="submenu">
+              <li><a href="#">전자기기</a></li>
+              <li><a href="#">지갑</a></li>
+              <li><a href="#">필기구</a></li>
+            </ul>
+          </li>
+
+          <!-- 4. 박물관 소개 -->
+          <li>
+            <a href="13_find()_about.html">박물관 소개</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 우측 검색창 영역 -->
+      <div class="header-util">
+        <form class="search-box" action="13_find()_index.html" method="get">
+          <input type="search" name="query" placeholder="분실물 검색" aria-label="검색">
+        </form>
+      </div>
+
+    </div>
+  </header>
+  <!-- 소개 인트로 (풀폭 배경) -->
+  <section class="intro-visual">
+    <img class="intro-bg" src="./images/13_building.jpeg" alt="">
+    <div class="intro-veil"></div>
+    <div class="intro-inner">
+      <h2 class="section-title">숙명분실물박물관이란?</h2>
+      <p class="about-desc">기존 SnoWee 분실물 게시판은 목록에 사진 없이 제목만 표시되어 있어, 자신이 잃어버린 물건인지 확인하려면 게시물을 하나씩 열어봐야 하는 불편함이 있었습니다. <strong>숙명분실물박물관</strong>은 물건 사진과 이름을 함께 보여주는 카드 그리드 형태로 분실물을 제공하여, 학생들이 물건을 한눈에 확인하고 보다 쉽고 빠르게 찾을 수 있도록 했습니다.</p>
+    </div>
+  </section>
+
+  <main class="about-container">
+    
+    <!-- 1. 기획 취지 소개 섹션 -->
+
+    <!-- 2. 단계별 이용 방법 (순서 목록) -->
+    <article class="about-section">
+      <h2 class="section-title">박물관 이용 방법</h2>
+      <ol class="step-list">
+        <li class="step">
+          <span class="step-num">01</span>
+          <div class="step-body">
+            <strong>분실물 검색</strong>
+            <p>박물관 갤러리에서 습득한 장소별, 시기별, 물건 종류별, 그리고 검색을 통해 박물관이 내 분실물을 소장하고 있는지 확인합니다.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">02</span>
+          <div class="step-body">
+            <strong>수령 신청</strong>
+            <p>'수령 신청' 화면에서 수령자의 세부정보와 보관처 데스크 방문 희망 일시를 입력합니다.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">03</span>
+          <div class="step-body">
+            <strong>현장 실물 수령</strong>
+            <p>학생증을 지참하여 지정된 보관처 데스크에 방문한 뒤 실물을 최종 수령합니다.</p>
+          </div>
+        </li>
+      </ol>
+    </article>
+
+    <!-- 3. 캠퍼스 보관처 현황 표 -->
+    <article class="about-section">
+      <h2 class="section-title">분실물 보관처 데스크 안내</h2>
+      <table class="info-table">
+        <caption>수령처 운영 시간표</caption>
+        <thead>
+          <tr>
+            <th>건물명</th>
+            <th>위치</th>
+            <th>운영 시간</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>제1창학캠퍼스 학생회관</td>
+            <td>305호 학생지원센터</td>
+            <td>월~금(09:00~17:30)</td>
+            <td>방학 중 월~목(10:00~17:00) 금(10:00~13:00)</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </article>
+
+  </main>
+
+  <!-- 꼬리말 영역 -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <p class="footer-name">숙명분실물박물관</p>
+        <p>서울특별시 용산구 청파로47길 100<br>숙명여자대학교 학생회관 305호 학생지원센터</p>
+      </div>
+      <div class="footer-col">
+        <h4>수령 데스크</h4>
+        <p>학생회관 305호 학생지원센터<br>월~금 09:00 ~ 17:30 운영</p>
+      </div>
+      <div class="footer-col">
+        <h4>문의</h4>
+        <p>교내 내선 02-710-9686</p>
+      </div>
+      <div class="footer-col">
+        <h4>이용 안내</h4>
+        <p>방문 시 실물 신분증(학생증 또는<br>주민등록증)을 반드시 지참해 주세요.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Lost &amp; Found Archive. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
