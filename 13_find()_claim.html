@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>숙명분실물박물관</title>
+  <!-- 과제 정보: 팀원 정보 기입 -->
+  <meta name="author" content="공도원, 김나윤, 김모예, 박서연">
+  <meta name="description" content="국립중앙박물관 웹을 참고한 숙명여자대학교 분실물 게시판">
+  
+  <!-- 외부 CSS 스타일시트 연동 -->
+  <link rel="stylesheet" href="./13_find()_style.css">
+</head>
+<body>
+
+  <!-- 머리말 및 상단 내비게이션 영역 -->
+  <header>
+    <div class="header-container">
+      
+      <!-- 로고 -->
+      <div class="logo">
+        <a href="13_find()_index.html">
+          <img src="./images/13_logo.png" alt="숙명여자대학교" class="logo-img"><h1>숙명분실물박물관</h1>
+        </a>
+      </div>
+
+      <!-- 메인 메뉴 (드롭다운 포함) -->
+      <nav class="gnb">
+        <ul>
+          <!-- 1. 장소별 -->
+          <li>
+            <a href="#">장소별</a>
+            <ul class="submenu">
+              <li><a href="#">순헌관</a></li>
+              <li><a href="#">명신관</a></li>
+              <li><a href="#">프라임관</a></li>
+              <li><a href="#">도서관</a></li>
+            </ul>
+          </li>
+
+          <!-- 2. 시기별 -->
+          <li>
+            <a href="#">시기별</a>
+            <ul class="submenu">
+              <li><a href="#">일주일 내</a></li>
+              <li><a href="#">한달 내</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. 종류별 -->
+          <li>
+            <a href="#">종류별</a>
+            <ul class="submenu">
+              <li><a href="#">전자기기</a></li>
+              <li><a href="#">지갑</a></li>
+              <li><a href="#">필기구</a></li>
+            </ul>
+          </li>
+
+          <!-- 4. 박물관 소개 -->
+          <li>
+            <a href="13_find()_about.html">박물관 소개</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 우측 검색창 영역 -->
+      <div class="header-util">
+        <form class="search-box" action="13_find()_index.html" method="get">
+          <input type="search" name="query" placeholder="분실물 검색" aria-label="검색">
+        </form>
+      </div>
+
+    </div>
+  </header>
+
+
+  
+
+  <hr>
+
+  <main>
+    <section class="claim-wrap">
+      <div class="claim-card">
+        <h2>본인 확인 및 수령 신청</h2>
+        <p class="claim-sub">신청 대상 물품: <strong>[No.001] 에어팟 프로 2세대</strong><br>정확한 본인 확인을 위해 아래 정보를 입력해 주세요.</p>
+
+        <form method="get" action="13_find()_index.html">
+
+          <fieldset>
+            <legend>신청인 정보</legend>
+            <div class="field-row">
+              <div class="field">
+                <label for="user-name">성명 *</label>
+                <input type="text" id="user-name" name="name" required placeholder="본인 실명">
+              </div>
+              <div class="field">
+                <label for="user-id">학번 *</label>
+                <input type="text" id="user-id" name="student_id" required placeholder="예: 2513638">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="user-tel">연락처</label>
+                <input type="tel" id="user-tel" name="tel" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" placeholder="010-1234-5678">
+              </div>
+              <div class="field">
+                <label for="user-email">이메일</label>
+                <input type="email" id="user-email" name="email" placeholder="example@sookmyung.ac.kr">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>방문 수령 예약</legend>
+            <div class="field-row">
+              <div class="field">
+                <label for="visit-date">방문 희망 일자 *</label>
+                <input type="date" id="visit-date" name="visit_date" required>
+              </div>
+              <div class="field">
+                <label for="visit-time">방문 희망 시간 *</label>
+                <input type="time" id="visit-time" name="visit_time" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- 수령 장소 고정 -->
+          <div class="pickup-fixed">
+            <span class="pickup-k">수령 장소</span>
+            <span class="pickup-v">학생회관 305호 학생지원센터 <em>(평일 09:00 ~ 17:30)</em></span>
+          </div>
+
+          <input type="submit" class="submit-big" value="수령 예약 신청서 제출">
+          <div class="form-actions">
+            <input type="reset" value="작성 초기화">
+          </div>
+
+          <p class="claim-guide">※ 방문 시 실물 신분증(학생증 또는 주민등록증)을 반드시 지참해 주세요. 본인 확인 후 수령이 가능합니다.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <hr>
+
+   <!-- 꼬리말 영역 -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <p class="footer-name">숙명분실물박물관</p>
+        <p>서울특별시 용산구 청파로47길 100<br>숙명여자대학교 학생회관 305호 학생지원센터</p>
+      </div>
+      <div class="footer-col">
+        <h4>수령 데스크</h4>
+        <p>학생회관 305호 학생지원센터<br>월~금 09:00 ~ 17:30 운영</p>
+      </div>
+      <div class="footer-col">
+        <h4>문의</h4>
+        <p>교내 내선 02-710-9686</p>
+      </div>
+      <div class="footer-col">
+        <h4>이용 안내</h4>
+        <p>방문 시 실물 신분증(학생증 또는<br>주민등록증)을 반드시 지참해 주세요.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Lost &amp; Found Archive. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

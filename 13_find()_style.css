@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;500;600&display=swap');
+@font-face{font-family:'NMFClassic';src:url('./fonts/13_NMFClassic-M.ttf') format('truetype');font-weight:400;font-display:swap;}
+@font-face{font-family:'NMFClassic';src:url('./fonts/13_NMFClassic-B.ttf') format('truetype');font-weight:700;font-display:swap;}
+@font-face{font-family:'HeirofLight';src:url('./fonts/13_HeirofLight-R.ttf') format('truetype');font-weight:400;font-display:swap;}
+@font-face{font-family:'HeirofLight';src:url('./fonts/13_HeirofLight-B.ttf') format('truetype');font-weight:700;font-display:swap;}
+
+
+/* ===== Gothic noir 색조합 ===== */
+/* 사용 색: #000000 / #D1D0D0 / #988686 / #5C4E4E */
+
+/* 기본 리셋 (Week6 box-sizing / margin / padding) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'HeirofLight', 'Noto Sans KR', sans-serif;   /* Week5 서체, Week6 웹폰트 */
+  background-color: #D7D6D6;                      /* Week5 배경 */
+  color: #1A1A1A;                               /* Week5 색상 */
+  line-height: 1.6;
+  overflow-y: scroll;
+}
+
+a { text-decoration: none; color: inherit; }  /* Week5 text-decoration */
+
+hr { border: none; border-top: 1px solid #BCBABA; }  /* Week6 border */
+
+/* ===== 1. 헤더 / 네비게이션 ===== */
+header { background-color: #000000; border-bottom: 1px solid #BCBABA; }
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;                 /* Week6 margin auto 가운데 정렬 */
+  display: flex;                  /* Week6 flex */
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.logo h1 {
+  font-family: 'NMFClassic', 'Noto Serif KR', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 1px;            /* Week5 letter-spacing */
+}
+
+nav.gnb > ul { display: flex; list-style: none; }  /* Week5 list-style */
+
+nav.gnb > ul > li { position: relative; margin-left: 30px; padding: 12px 0; }  /* Week6 position / margin */
+
+nav.gnb > ul > li > a { font-size: 16px; font-weight: 500; color: #FFFFFF; }
+
+nav.gnb > ul > li:hover > a { color: #B29E9E; }  /* Week5 :hover 가상클래스 */
+
+.submenu {
+  display: none;                  /* Week6 display */
+  position: absolute;             /* Week6 position absolute */
+  top: 100%;
+  left: 0;
+  background-color: #FFFFFF;
+  min-width: 150px;               /* Week6 min-width */
+  border: 1px solid #BCBABA;
+  padding: 6px 0;
+  z-index: 100;                   /* Week6 z-index */
+  list-style: none;
+}
+
+.submenu li a { display: block; padding: 9px 16px; font-size: 14px; color: #1A1A1A; }
+
+.submenu li a:hover { background-color: #D7D6D6; color: #000000; font-weight: 700; }
+
+nav.gnb > ul > li:hover .submenu { display: block; }
+
+.header-util { display: flex; align-items: center; }
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #1C1C1C;
+  border: 1px solid #3A3434;
+  border-radius: 20px;            /* Week6 border-radius */
+  padding: 4px 6px 4px 14px;
+  width: 230px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+  color: #E6E3E3;
+}
+
+.search-box button { background: none; border: none; cursor: pointer; font-size: 14px; padding: 4px 8px; color: #E6E3E3; }
+
+/* ===== 2. 메인 공통 ===== */
+main { max-width: 1200px; margin: 44px auto; padding: 0 24px; }
+
+.section-title {
+  font-family: 'NMFClassic', 'Noto Serif KR', serif;
+  font-size: 26px;
+  color: #1A1A1A;
+  border-left: 5px solid #000000;   /* Week6 border */
+  padding-left: 14px;
+  margin-bottom: 30px;
+}
+
+/* ===== index : 카드 갤러리 (flex 3열, grid 대신) ===== */
+.card-grid { display: flex; flex-wrap: wrap; justify-content: space-between; }  /* Week6 flex-wrap / justify-content */
+
+.card-item {
+  width: 31.5%;                   /* Week6 % 단위 */
+  background-color: #FFFFFF;
+  border: 1px solid #BCBABA;
+  margin-bottom: 34px;
+}
+
+.card-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;              /* Week6 object-fit */
+  display: block;
+  background-color: #ECEAEA;
+}
+
+.card-item figcaption {
+  font-family: 'NMFClassic', 'Noto Serif KR', serif;
+  padding: 16px;
+  font-size: 16px;
+  color: #1A1A1A;
+  text-align: center;
+  border-top: 1px solid #BCBABA;
+  background-color: #FFFFFF;
+}
+
+.card-item:hover { border-color: #000000; }
+.card-item:hover figcaption { color: #000000; }
+
+/* ===== detail : 사진 + 제원표 (flex 2단) ===== */
+.detail-container { display: flex; flex-wrap: wrap; }
+
+.detail-media { width: 360px; margin-right: 40px; margin-bottom: 24px; }
+.detail-media img { width: 100%; height: auto; border: 1px solid #BCBABA; }
+.detail-media figcaption { margin-top: 10px; font-size: 13px; color: #5C4E4E; }
+
+.detail-spec { flex-grow: 1; }   /* Week6 flex-grow */
+
+.detail-spec table { border-collapse: collapse; width: 100%; background-color: #FFFFFF; }  /* Week5 border-collapse */
+.detail-spec caption { caption-side: top; text-align: left; font-size: 13px; color: #5C4E4E; padding-bottom: 10px; }  /* Week5 caption-side */
+.detail-spec th, .detail-spec td { border: 1px solid #BCBABA; padding: 13px 15px; text-align: left; font-size: 15px; }
+.detail-spec thead th { background-color: #000000; color: #FFFFFF; }
+.detail-spec tbody th { background-color: #ECEAEA; color: #000000; width: 130px; }
+
+.claim-link {
+  display: inline-block;          /* Week6 inline-block */
+  margin-top: 22px;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 14px 30px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.claim-link:hover { background-color: #5C4E4E; }
+
+/* ===== about : 소개 ===== */
+.about-container { max-width: 900px; margin: 44px auto; padding: 0 24px; }
+.about-section { margin-bottom: 52px; }
+.about-desc { font-size: 16px; line-height: 1.9; color: #1A1A1A; }
+.about-desc strong { color: #000000; }
+
+.step-list { padding-left: 22px; }
+.step-list li { margin-bottom: 14px; font-size: 15px; line-height: 1.7; }
+.step-list li strong { color: #000000; }
+
+.info-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.info-table caption { caption-side: top; text-align: left; font-size: 13px; color: #5C4E4E; padding-bottom: 10px; }
+.info-table th, .info-table td { border: 1px solid #BCBABA; padding: 13px 15px; text-align: left; font-size: 14px; }
+.info-table thead th { background-color: #000000; color: #FFFFFF; }
+.info-table tbody td { background-color: #FFFFFF; }
+
+/* ===== claim : 신청 폼 ===== */
+main article > h2 { font-family: 'NMFClassic', 'Noto Serif KR', serif; font-size: 26px; color: #1A1A1A; margin-bottom: 10px; }
+main article > p { margin-bottom: 20px; }
+
+fieldset { border: 1px solid #BCBABA; background-color: #FFFFFF; padding: 22px 26px; margin-bottom: 22px; }
+legend { font-family: 'NMFClassic', 'Noto Serif KR', serif; font-weight: 600; color: #000000; padding: 0 8px; }
+
+form p { margin-bottom: 14px; }
+form label { display: inline-block; width: 110px; color: #1A1A1A; }
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="time"], input[type="search"], select {
+  padding: 10px 12px;
+  border: 1px solid #BCBABA;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  background-color: #FFFFFF;
+  color: #1A1A1A;
+  min-width: 240px;
+}
+
+input[type="submit"] {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+input[type="submit"]:hover { background-color: #5C4E4E; }
+
+input[type="reset"] {
+  background-color: #FFFFFF;
+  color: #1A1A1A;
+  border: 1px solid #BCBABA;
+  padding: 13px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ===== 3. 푸터 ===== */
+footer {
+  background-color: #000000;
+  color: #B9B6B6;
+  text-align: center;
+  padding: 32px 24px;
+  margin-top: 60px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* ===== 히어로 (사진 위 글씨) ===== */
+.hero { position: relative; }                                   /* Week6 position relative */
+.hero-bg { display: block; width: 100%; height: 600px; object-fit: cover; }  /* Week6 object-fit */
+.hero-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;  /* Week6 position absolute */
+  display: flex; flex-direction: column;                          /* Week6 flex */
+  justify-content: center; align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.42);                          /* Week5 rgba 투명도 */
+}
+.hero-overlay .eyebrow { color: #ffffff; font-size: 15px; letter-spacing: 6px; }  /* Week5 letter-spacing */
+.hero-overlay h2 { color: #ffffff; font-family: 'NMFClassic', 'Noto Serif KR', serif; font-size: 52px; font-weight: 600; margin: 16px 0; letter-spacing: 2px; }
+.hero-overlay .big { color: #ffffff; font-size: 20px; letter-spacing: 8px; }
+@media (max-width: 600px){ .hero-bg{ height: 460px; } .hero-overlay h2{ font-size: 34px; } }
+
+
+/* ===== 헤더 로고 이미지 ===== */
+.logo-img { height: 34px; vertical-align: middle; margin-right: 10px; }  /* Week5 vertical-align */
+.logo h1 { display: inline-block; vertical-align: middle; }              /* Week6 inline-block */
+
+
+/* ===== 이용 방법 단계 박스 ===== */
+.step-list { list-style: none; padding: 0; }                       /* Week5 list-style */
+.step {
+  display: flex; align-items: flex-start;                          /* Week6 flex */
+  border: 1px solid #BCBABA;                                      /* Week6 border */
+  background-color: #FFFFFF;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+}
+.step-num { flex: none; width: 60px; font-family: 'NMFClassic', 'Noto Serif KR', serif; font-size: 30px; color: #000000; line-height: 1; }
+.step-body strong { display: block; font-family: 'NMFClassic', 'Noto Serif KR', serif; font-size: 18px; color: #000000; margin-bottom: 8px; }
+.step-body p { margin: 0; color: #5C4E4E; line-height: 1.7; font-size: 15px; }
+
+
+/* ===== 히어로 추가 요소 (연도 / 소개문 / 스크롤) ===== */
+.hero-overlay .eyebrow { margin-bottom: 18px; }
+.hero-head { display: flex; align-items: center; justify-content: center; }  /* Week6 flex */
+.hero-head h2 { margin: 0; }
+.hero-year { font-family: 'NMFClassic', 'Noto Serif KR', serif; font-size: 34px; color: rgba(255,255,255,0.6); margin: 0 30px; }  /* Week5 rgba */
+.hero-desc { color: rgba(255,255,255,0.85); max-width: 540px; line-height: 1.8; margin-top: 26px; font-size: 15px; }
+.hero-scroll { color: rgba(255,255,255,0.7); font-size: 12px; letter-spacing: 4px; margin-top: 34px; line-height: 1.9; }
+@media (max-width: 600px){ .hero-year { font-size: 22px; margin: 0 14px; } }
+
+
+/* ===== 카드 모서리 둥글게 (애플 느낌) ===== */
+.card-item { border-radius: 18px; overflow: hidden; }   /* Week6 border-radius / overflow */
+
+
+/* ===== 푸터 확장 ===== */
+footer { text-align: left; }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; }  /* Week6 flex-wrap */
+.footer-col { margin-bottom: 18px; margin-right: 24px; }
+.footer-brand { max-width: 300px; }
+.footer-name { font-family: 'NMFClassic', 'Noto Serif KR', serif; font-size: 16px; color: #FFFFFF; margin-bottom: 10px; }
+.footer-col h4 { font-size: 13px; letter-spacing: 1px; color: #FFFFFF; margin-bottom: 12px; }  /* Week5 letter-spacing */
+.footer-col p { color: #B9B6B6; line-height: 1.8; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 7px; }
+.footer-col li a { color: #B9B6B6; }
+.footer-col li a:hover { color: #B29E9E; }
+.footer-bottom { max-width: 1200px; margin: 22px auto 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.14); font-size: 12px; color: #B9B6B6; }
+
+
+/* ===== 상세 페이지 사진·표 정렬 보정 ===== */
+.detail-container { align-items: flex-start; }                 /* Week6 flex 정렬 */
+.detail-media { width: 380px; }
+.detail-media img { width: 100%; height: 460px; object-fit: cover; border-radius: 8px; }  /* Week6 object-fit / border-radius */
+.detail-spec { min-width: 0; }                                  /* Week6 min-width */
+
+
+/* ===== 상세 페이지 상품형 레이아웃 ===== */
+.product { display: flex; flex-wrap: wrap; align-items: flex-start; }   /* Week6 flex */
+.product-media { width: 440px; margin-right: 56px; margin-bottom: 30px; }
+.product-media img { width: 100%; height: auto; border-radius: 10px; background-color: #FFFFFF; }  /* Week6 border-radius */
+.product-media figcaption { margin-top: 12px; font-size: 13px; color: #5C4E4E; }
+.product-info { flex-grow: 1; min-width: 0; max-width: 560px; }          /* Week6 flex-grow / min-width */
+
+.breadcrumb { font-size: 13px; color: #5C4E4E; margin-bottom: 18px; letter-spacing: 0.04em; }
+.product-head { display: flex; align-items: flex-start; justify-content: space-between; }
+.product-head h2 { font-family: 'NMFClassic', 'Noto Serif KR', serif; font-size: 34px; line-height: 1.3; color: #1A1A1A; margin: 0; }
+.product-id { font-size: 14px; color: #5C4E4E; white-space: nowrap; margin-top: 10px; margin-left: 14px; }
+.product-status { margin: 16px 0 0; font-size: 14px; color: #000000; }
+
+.rule { border: none; border-top: 1px solid #BCBABA; margin: 28px 0; }
+
+.block-title { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: #1A1A1A; margin: 30px 0 14px; }  /* Week5 letter-spacing / text-transform */
+.block-text { font-size: 15px; line-height: 1.9; color: #5C4E4E; margin: 0; }
+.block-text strong { color: #1A1A1A; }
+
+.info-rows { margin-top: 14px; }
+.info-row { display: flex; padding: 13px 2px; border-top: 1px solid #BCBABA; }
+.info-row:last-child { border-bottom: 1px solid #BCBABA; }
+.info-row .k { width: 120px; flex: none; color: #5C4E4E; font-size: 14px; }
+.info-row .v { color: #1A1A1A; font-size: 15px; }
+
+.claim-btn {
+  display: block; margin-top: 36px;
+  background-color: #000000; color: #FFFFFF;
+  text-align: center; padding: 22px; font-size: 16px; letter-spacing: 1px;
+  border: 1px solid #000000; border-radius: 6px;
+}
+.claim-btn:hover { background-color: #FFFFFF; color: #000000; }
+.claim-note { margin: 16px 0 0; font-size: 13px; color: #5C4E4E; text-align: center; }
+
+@media (max-width: 720px){ .product-media { width: 100%; margin-right: 0; } }
+
+
+/* ===== 상세 박스형(EVOLVE) 보정 ===== */
+.info-panel { border: 1px solid #BCBABA; background-color: #FFFFFF; padding: 44px 46px; }  /* Week6 border */
+.product-media img { border-radius: 0; }                         /* 각진 네모 */
+.block-title { font-size: 20px; letter-spacing: 1px; text-transform: none; color: #1A1A1A; margin: 34px 0 16px; }
+.block-text { font-size: 15px; }
+.claim-btn { background-color: #FFFFFF; color: #1A1A1A; border: 1px solid #1A1A1A; border-radius: 0; padding: 26px; font-size: 16px; }
+.claim-btn:hover { background-color: #000000; color: #FFFFFF; border-color: #000000; }
+
+
+/* 상세 breadcrumb 상단 정렬 */
+.product { margin-top: 4px; }
+main > .breadcrumb { margin-bottom: 20px; }
+
+
+/* ===== 본인확인 폼 카드 (레퍼런스 스타일) ===== */
+.claim-card { max-width: 640px; margin: 0 auto; background-color: #FFFFFF; border: 1px solid #BCBABA; padding: 48px 50px; }
+.claim-card > h2 { font-family: 'NMFClassic', 'Noto Serif KR', serif; font-size: 26px; color: #1A1A1A; margin: 0 0 10px; }
+.claim-sub { font-size: 14px; color: #5C4E4E; line-height: 1.7; margin-bottom: 30px; }
+.claim-sub strong { color: #1A1A1A; }
+.claim-card fieldset { border: none; background: transparent; padding: 0; margin: 0 0 26px; }
+.claim-card legend { font-family: 'NMFClassic', 'Noto Serif KR', serif; font-size: 16px; color: #000000; padding: 0; margin-bottom: 16px; }
+.field-row { display: flex; }                               /* Week6 flex */
+.field-row .field { flex-grow: 1; margin-right: 18px; }     /* Week6 flex-grow */
+.field-row .field:last-child { margin-right: 0; }
+.claim-card .field { margin-bottom: 16px; }
+.claim-card label { display: block; width: auto; font-size: 13px; color: #5C4E4E; margin-bottom: 8px; }
+.claim-card input[type="text"], .claim-card input[type="tel"], .claim-card input[type="email"], .claim-card input[type="date"], .claim-card input[type="time"] {
+  width: 100%; min-width: 0; padding: 12px 14px; border: 1px solid #BCBABA; border-radius: 4px;
+  font-family: inherit; font-size: 14px; background-color: #FFFFFF; color: #1A1A1A;
+}
+.pickup-fixed { display: flex; align-items: baseline; padding: 16px 18px; background-color: #ECEAEA; border: 1px solid #BCBABA; margin-bottom: 28px; }
+.pickup-k { width: 84px; flex: none; font-size: 13px; color: #5C4E4E; }
+.pickup-v { font-size: 15px; color: #1A1A1A; }
+.pickup-v em { font-style: normal; font-size: 13px; color: #5C4E4E; margin-left: 4px; }
+.submit-big { width: 100%; background-color: #000000; color: #FFFFFF; border: 1px solid #000000; border-radius: 0; padding: 18px; font-size: 16px; letter-spacing: 1px; font-family: inherit; cursor: pointer; }
+.submit-big:hover { background-color: #FFFFFF; color: #000000; }
+.form-actions { text-align: center; margin-top: 14px; }
+.form-actions input[type="reset"] { background: none; border: none; color: #5C4E4E; font-size: 13px; cursor: pointer; text-decoration: underline; font-family: inherit; }
+.claim-guide { margin-top: 24px; font-size: 13px; color: #5C4E4E; line-height: 1.7; text-align: center; }
+@media (max-width: 560px){ .field-row { flex-wrap: wrap; } .field-row .field { margin-right: 0; } }
+
+
+/* ===== 갤러리 여백·탭·카드 (CURATIONIST 스타일) ===== */
+main { margin-top: 68px; }
+.gallery-head { margin-bottom: 30px; }
+.gallery-title { font-family: 'NMFClassic', 'Noto Serif KR', serif; font-size: 40px; color: #1A1A1A; margin: 0; }
+.gallery-desc { font-size: 15px; color: #5C4E4E; margin: 14px 0 0; }
+.tabs { display: flex; border-bottom: 1px solid #BCBABA; margin-bottom: 48px; }   /* Week6 flex / border */
+.tab { font-size: 16px; color: #5C4E4E; padding: 0 2px 14px; margin-right: 30px; }
+.tab.is-active { color: #1A1A1A; border-bottom: 2px solid #000000; font-weight: 500; }
+
+.card-grid { display: flex; flex-wrap: wrap; justify-content: space-between; }
+.card-item { width: 30%; background-color: transparent; border: none; border-radius: 0; overflow: visible; margin-bottom: 58px; }
+.card-item figure { margin: 0; }
+.card-item img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; background-color: #ECEAEA; display: block; }
+.card-body { padding-top: 18px; }
+.card-name { font-family: 'NMFClassic', 'Noto Serif KR', serif; font-size: 18px; color: #1A1A1A; margin: 0; }
+.card-meta { font-size: 13px; color: #5C4E4E; margin: 8px 0 0; }
+.card-item:hover .card-name { color: #000000; }
+@media (max-width: 760px){ .card-item { width: 47%; } }
+@media (max-width: 520px){ .card-item { width: 100%; } }
+
+
+/* 브랜드(숙명분실물박물관) 폰트: Heir of Light */
+.logo h1 { font-family: 'HeirofLight', serif; }
+.hero-head h2 { font-family: 'HeirofLight', serif; }
+
+
+/* ===== 소개 인트로 배경 사진 ===== */
+.intro-section { position: relative; overflow: hidden; padding: 56px 44px; }   /* Week6 position / overflow */
+.intro-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0.16; z-index: 0; }  /* Week6 object-fit / object-position / opacity / z-index */
+.intro-content { position: relative; z-index: 1; }
+
+
+/* ===== 소개 인트로 풀폭 배경 ===== */
+.intro-hero { position: relative; overflow: hidden; }
+.intro-bg { opacity: 1; }
+.intro-veil { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.48); z-index: 1; }  /* Week5 rgba 대비 */
+.intro-inner { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; padding: 96px 24px; }
+.intro-inner .section-title { border-left: none; padding-left: 0; color: #ffffff; font-size: 34px; }
+.intro-inner .about-desc { color: #ffffff; font-weight: 700; font-size: 17px; line-height: 1.9; max-width: 760px; }
+.intro-inner .about-desc strong { color: #ffffff; }
+
+
+/* ===== 갤러리 카드 테두리(액자형) ===== */
+.card-item { border: 1px solid #C4C2C2; border-radius: 12px; background-color: #FFFFFF; padding: 14px; margin-bottom: 40px; }
+.card-item img { height: 260px; border-radius: 6px; }
+.card-body { padding: 16px 6px 4px; }
+.card-item:hover { border-color: #000000; }
